@@ -1,0 +1,152 @@
+@keyframes orbit {
+    0% {
+        transform: translate(20px, 0) rotate(40deg);
+        /* Start at the left of the text */
+    }
+
+    25% {
+        transform: translate(180px, 4px) rotate(120deg);
+        /* Move to top right corner */
+    }
+
+    50% {
+        transform: translate(180px, 50px) rotate(210deg);
+        /* Move to bottom right corner */
+    }
+
+    75% {
+        transform: translate(20px, 50px) rotate(300deg);
+        /* Move to bottom left corner */
+    }
+
+    100% {
+        transform: translate(20px, 0) rotate(-360deg);
+        /* Back to start */
+    }
+}
+
+@keyframes orbit2 {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+        /* Start at the original position */
+    }
+
+    25% {
+        transform: translate(80vw, -50vh) rotate(90deg);
+        /* Move to top right corner */
+    }
+
+    50% {
+        transform: translate(90vw, 92vh) rotate(180deg);
+        /* Move to bottom right corner */
+    }
+
+    75% {
+        transform: translate(-50px, 95vh) rotate(270deg);
+        /* Move to bottom left corner */
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(360deg);
+        /* Back to start */
+    }
+}
+
+
+.orbiting-icon {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: orbit 6s ease-in-out infinite;
+    /* Smooth transition */
+}
+
+.orbiting-icon2 {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: orbit2 10s ease-in-out infinite;
+}
+
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-70px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* 
+.orbiting-icon {
+    position: relative;
+    animation: spin 10s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+} */
+
+
+
+.falling-numbers {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    /* Prevent interactions with falling numbers */
+}
+
+.falling-number {
+    position: absolute;
+    top: -50px;
+    /* Start above the viewport */
+    font-size: 24px;
+    /* Size of the number */
+    color: blue;
+    /* Color of the numbers */
+    opacity: 0.9;
+    /* Slight transparency */
+    animation: fall linear forwards;
+    /* Use linear motion */
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(100vh);
+        /* Fall to the bottom of the screen */
+    }
+}
