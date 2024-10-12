@@ -4,6 +4,7 @@ import { ScrollRestoration } from "react-router-dom"
 const HomeLayout = () => {
     return (
         <>
+
             <ScrollRestoration />
             <Header />
             <Outlet />

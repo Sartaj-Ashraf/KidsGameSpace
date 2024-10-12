@@ -35,11 +35,11 @@ const AllGames = () => {
 
                 {/* Game Cards Grid */}
                 {games.length > 0 ? (
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                         {games.map((game) => (
                             <div
                                 key={game.gameId}
-                                className="relative p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-transform transform hover:scale-105 duration-300"
+                                className="relative p-2 bg-white rounded-lg shadow-lg hover:shadow-xl transition-transform transform hover:scale-105 duration-300"
                             >
                                 {/* Background shapes for decoration */}
                                 <div className="absolute z-[-4] top-0 right-0 w-24 h-24 bg-red-200 rounded-full opacity-50 animate-ping"></div>

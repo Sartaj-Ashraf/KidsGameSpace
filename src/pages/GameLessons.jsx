@@ -7,7 +7,7 @@ const GameLessons = () => {
             <div className='max-w-7xl mx-auto'>
                 {/* Fun Animated Title */}
                 <h2 className="text-4xl font-bold text-center mb-8 text-purple-700 drop-shadow-lg animate-pulse bg-gradient-to-r from-green-200 via-yellow-100 to-blue-200 p-4">
-                    Choose a lesson for game
+                    Select Lesson 📚
                 </h2>
 
                 <ShapesAnimation />
@@ -15,7 +15,7 @@ const GameLessons = () => {
                     🚀
                 </span>
                 {/* Game Cards Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 min-w-28 min-h-28">
+                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 min-w-28 min-h-28">
                     {gameLessons.map((game) => (
                         <div key={game.gameLessonId} className="relative p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-transform transform hover:scale-105 duration-300">
                             <div>

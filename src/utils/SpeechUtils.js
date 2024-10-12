@@ -8,10 +8,6 @@ class SpeechUtils {
         utterance.lang = 'en-UK';
         this.synthesis.speak(utterance);
     }
-
-    getVoices() {
-        return this.synthesis.getVoices();
-    }
 }
 
 export default new SpeechUtils(); 

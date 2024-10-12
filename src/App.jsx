@@ -1,7 +1,8 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import { Home, GameLessons, LearnShapes, ShapeRace, LearnCounting } from "./pages";
+import { Home, GameLessons, LearnShapes, ShapeRace, GamePage } from "./pages";
 import HomeLayout from "./layout/HomeLayout";
 import AllGames from "./pages/allGames/AllGames";
+import LessonPage from "./pages/LessonPage";
 
 /**
  * Documentation for React Router Setup
@@ -56,22 +57,20 @@ const router = createBrowserRouter([
         element: <AllGames />,
       },
       {
-        path: '/game-lessons/games/summary/:id',
-        element: <LearnShapes />,
+        path: '/game-lessons/game-lesson/:id',
+        element: <LessonPage />,
       },
-
-      {
-        path: '/game-lessons/games/summary/:id',
-        element: <LearnCounting />,
-      },
-
-
     ],
 
   },
   {
-    path: '/game-lessons/games/game/:id',
+    path: '/game-lessons/games/shapes/:id',
     element: <ShapeRace />,
+  },
+  {
+    path: '/game-lessons/games/counting/:id',
+    element: <GamePage />,
+    // element: <CountAndMatchGame />,
   },
 ]);
 

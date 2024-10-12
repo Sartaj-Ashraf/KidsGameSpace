@@ -5,6 +5,7 @@ import race_track from "../../../assets/images/race-track.jpg";
 import yellow_car from "../../../assets/images/car-yellow.png";
 import white_car from "../../../assets/images/car-white.png";
 import { Link } from 'react-router-dom';
+import SpeechUtils from '../../../utils/SpeechUtils';
 
 const shapes = [
     { name: 'Circle', symbol: '●' },
@@ -106,7 +107,7 @@ const ShapeRace = () => {
                     {/* Player 1's car */}
                     <div
                         id="player1"
-                        className="character w-40 h-40 absolute bottom-0"
+                        className="character w-40 h-40 absolute bottom-0 transition-all duration-1000"
                         style={{
                             left: `${player1Position}px`,
                             transform: `translateX(${player1Position}px)`
@@ -118,7 +119,7 @@ const ShapeRace = () => {
                     {/* Player 2's car */}
                     <div
                         id="player2"
-                        className="character w-40 h-40 absolute bottom-30"
+                        className="character w-40 h-40 absolute bottom-30 transition-all duration-1000"
                         style={{
                             left: `${player2Position}px`,
                             transform: `translateX(${player2Position}px)`
@@ -134,6 +135,7 @@ const ShapeRace = () => {
                         <>
                             <img src={white_car} alt="Player 1's car" className='w-16 h-16 mr-2' />
                             <div className="text-lg">
+                                {SpeechUtils.speak(`Select ${correctShape}`)}
                                 Select {correctShape}
                             </div>
                         </>
@@ -141,6 +143,7 @@ const ShapeRace = () => {
                         <>
                             <img src={yellow_car} alt="Player 2's car" className='w-16 h-16 mr-2' />
                             <div className="text-lg">
+                                {SpeechUtils.speak(`Select ${correctShape}`)}
                                 Select {correctShape}
                             </div>
                         </>
@@ -190,8 +193,8 @@ const ShapeRace = () => {
             {winnerWindow && (
                 <div className="fixed inset-0 bg-blue-500 bg-opacity-75 flex items-center justify-center z-50">
                     <div className="bg-white p-8 rounded-lg text-center animate-fade-in shadow-lg transform scale-105 transition-transform">
-                        <h2 className="text-4xl font-extrabold text-[#ff5757] mb-4 animate-bounce">{winner} Wins!</h2>
-                        <p className="text-2xl text-[#01427a]">🎉 Congratulations on your victory! 🎉</p>
+                        <h2 className="text-4xl font-extrabold text-[#ff5757] mb-4 animate-bounce">{winner} Wins! 😜</h2>
+                        <p className="text-2xl text-[#01427a]">🎉 Congratulations on your victory! 🏆🎖️</p>
                         <p className="mt-4 text-lg text-[#6c6c6c]">You're a superstar racer! 🌟 Keep racing to become the ultimate champion!</p>
                         <button
                             className=" bg-yellow-500 hover:bg-yellow-600 text-white py-2 px-4 text-lg rounded-lg cursor-pointer mt-5 transition-transform transform hover:scale-110"
